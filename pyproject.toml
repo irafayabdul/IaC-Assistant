@@ -1,0 +1,32 @@
+[project]
+name = "IaC-Assistant"
+version = "0.1.0"
+description = "An IaC Agent prototype to generate containers, create terraform config as per project requirements, plan and spin up the local or cloud instance."
+license = "MIT"
+authors = [
+    {name = "Abdul Rafay",email = "irafayabdul@gmail.com"},
+    {name = "Sohaib Khan Niazi",email = "sohaibkhanniazi1997@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.11"
+
+
+[tool.poetry]
+packages = [
+    { include = "iac_assistant", from = "python" }
+]
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.4.1"
+black = "^25.1.0"
+flake8 = "^7.3.0"
+pre-commit = "^4.2.0"
+tox = "^4.28.4"
+python-dotenv = "^1.1.1"
+mypy = "^1.17.1"
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
