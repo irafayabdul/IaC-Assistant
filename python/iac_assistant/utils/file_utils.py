@@ -1,6 +1,9 @@
+from __future__ import annotations
+
 import os
 
-def read_folder_structure(path):
+
+def read_folder_structure(path: str) -> str:
     output = ""
     for root, dirs, files in os.walk(path):
         level = root.replace(path, "").count(os.sep)
@@ -11,6 +14,7 @@ def read_folder_structure(path):
             output += f"{sub_indent}{file}\n"
     return output
 
-def read_file(filepath):
+
+def read_file(filepath: str) -> str:
     with open(filepath, "r") as file:
         return file.read()
